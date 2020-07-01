@@ -1,3 +1,5 @@
+import javax.swing.tree.TreeNode;
+
 /*
  * @lc app=leetcode id=104 lang=java
  *
@@ -22,6 +24,13 @@
  */
 class Solution {
     public int maxDepth(TreeNode root) {
+        if(root==null){
+            return 0;
+        }
+        int l1 = maxDepth(root.left);
+        int l2 = maxDepth(root.right);
+
+            return 1 + (l1>l2? l1:l2);
         
     }
 }

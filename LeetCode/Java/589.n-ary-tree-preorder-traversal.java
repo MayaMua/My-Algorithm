@@ -29,7 +29,7 @@ class Node {
     }
 };
 */
-
+// 589
 // https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/solution/java-ncha-shu-qian-xu-bian-li-di-gui-die-dai-by-st/
 // *************************************************************************
 // recursion 

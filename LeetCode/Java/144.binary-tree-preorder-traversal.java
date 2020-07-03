@@ -20,17 +20,13 @@
  *     }
  * }
  */
+// https://blog.csdn.net/qq_20417499/article/details/100062564
+
+// 144
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList();
-        if(root == null) {
-            return res;
-
-        }
-
-        res.add(root.val);
-        preorder(root.left, res);
-        preorder(root.right, res);
+        preorder(root, res);
         return res;
     }
 

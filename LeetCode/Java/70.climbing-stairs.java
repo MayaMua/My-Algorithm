@@ -36,17 +36,30 @@ class Solution {
     //     return memo[n];
     // }
 
+    // ========================================================
 
+    // public int climbStairs(int n) {
+    //     if(n==1)
+    //         return 1;
+    //     int memo[] = new int[n+1];
+    //     memo[1] = 1;
+    //     memo[2] = 2;
+    //     for(int i=3; i<=n; i++) {
+    //         memo[i] = memo[i-1] + memo[i-2];
+    //     }
+    //     return memo[n];
+    // }
+
+    // ========================================================
     public int climbStairs(int n) {
-        if(n==1)
-            return 1;
-        int memo[] = new int[n+1];
-        memo[1] = 1;
-        memo[2] = 2;
-        for(int i=3; i<=n; i++) {
-            memo[i] = memo[i-1] + memo[i-2];
+        if(n <= 2) return n;
+        int f1 = 1, f2 = 2, f3 = 3;
+        for (int i=3; i<n+1; i++) {
+            f3 = f1 + f2;
+            f1 = f2;
+            f2 = f3;
         }
-        return memo[n];
+        return f3;
     }
 
 

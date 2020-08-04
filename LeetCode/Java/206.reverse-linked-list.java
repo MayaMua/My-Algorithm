@@ -1,3 +1,7 @@
+import java.util.List;
+
+import javax.management.ListenerNotFoundException;
+
 /*
  * @lc app=leetcode id=206 lang=java
  *
@@ -17,17 +21,30 @@
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
-        ListNode prev = null; 
-        ListNode current = head; 
-        ListNode next = null; 
-        while (current != null) { 
-            next = current.next; 
-            current.next = prev; 
-            prev = current; 
-            current = next; 
-        } 
-        head = prev; 
-        return head; 
+        // ListNode prev = null; 
+        // ListNode current = head; 
+        // ListNode next = null; 
+        // while (current != null) { 
+        //     next = current.next; 
+        //     current.next = prev; 
+        //     prev = current; 
+        //     current = next; 
+        // } 
+        // head = prev; 
+        // return head; 
+
+        ListNode pre = null;
+        ListNode cur = head;
+        ListNode next = null;
+        ListNode tmp = null;
+        while (cur != null) {
+            tmp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = tmp;
+        }
+        return pre;
+
     }
 }
 // @lc code=end

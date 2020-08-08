@@ -15,7 +15,6 @@ class Solution {
                 amount += prices[i+1] - prices[i];
         }
         return amount;
-        
     }
 }
 // @lc code=end

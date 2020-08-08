@@ -35,6 +35,7 @@ class Solution {
         _generate(0, 0, n, "");
         return result;
     }
+    
     private void _generate(int left, int right, int n, String s) {
         // terminator
         if(left==n && right==n) {

@@ -16,7 +16,7 @@ class Solution {
                     fiveCounts--;
                     tenCounts++;
                 } else return false;
-            } else if (bills[i] == 20) {
+            } else {
                 if (tenCounts > 0 && fiveCounts > 0) {
                     tenCounts--;
                     fiveCounts--;
